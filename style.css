@@ -1,12 +1,12 @@
 body {
   background: fixed;
-  background-color: aquamarine;
+  background-color: rgb(40, 199, 146);
 }
 
 #FirstPersonName {
   position: relative;
   left: 500px;
-  top: 200px;
+  top: 220px;
   /* border: 3px solid #555; */
   margin: 10px;
   width: 200px;
@@ -14,12 +14,13 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 17px;
+  /* overflow: visible; */
 }
 
 #SecondPersonName {
   position: relative;
   left: 600px;
-  top: 250px;
+  top: 200px;
   margin: 10px;
   width: 200px;
   height: 30px;
@@ -40,14 +41,38 @@ body {
   top: 300px;
 }
 
-#icon {
+#icon1 {
   position: relative;
   left: 600px;
-  top: 220px;
+  top: 230px;
   margin: 10px;
   width: 200px;
   height: 30px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 17px;
+}
+
+#icon2 {
+  position: relative;
+  left: 300px;
+  top: 100px;
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 17px;
+}
+
+#icon3 {
+  position: relative;
+  left: 450px;
+  top: 250px;
+}
+
+#result {
+  position: relative;
+  left: 500px;
+  top: 200px;
 }
