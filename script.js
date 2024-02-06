@@ -6,6 +6,7 @@ let submitButton = document.getElementById('GeneratePercentage');
 let FinalResult = document.getElementById('result');
 let RefreshPage = document.getElementById('clearField');
 // let iconPosition = document.getElementById('icon');
+FinalResult.classList.add('custom-text');
 
 let person1 = textfield1.value;
 let person2 = textfield2.value;
