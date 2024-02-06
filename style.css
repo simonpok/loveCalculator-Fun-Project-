@@ -1,6 +1,8 @@
 body {
   background: fixed;
   background-color: rgb(40, 199, 146);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #FirstPersonName {
@@ -31,15 +33,36 @@ body {
 
 #GeneratePercentage {
   position: relative;
-  left: 550px;
+  left: 650px;
   top: 300px;
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-#clearField {
+#GeneratePercentage:hover {
+  background-color: #3e8e41;
+}
+
+#GeneratePercentage:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translate(4px);
+}
+
+/* #clearField {
   position: relative;
   left: 600px;
   top: 300px;
-}
+} */
 
 #icon1 {
   position: relative;
@@ -73,6 +96,6 @@ body {
 
 #result {
   position: relative;
-  left: 500px;
-  top: 200px;
+  left: 550px;
+  top: 180px;
 }

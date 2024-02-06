@@ -15,6 +15,7 @@ let arr2 = [];
 let arr3 = [];
 let arr4 = [];
 let arr5 = [];
+
 let sum = 0;
 let sum2 = 0;
 let sum3 = 0;
@@ -25,6 +26,12 @@ let arrayOfDigits3;
 let arrayOfDigits4;
 
 submitButton.addEventListener('click', () => {
+  let arr2 = [];
+  let arr3 = [];
+  let arr4 = [];
+
+  FinalResult.textContent = '';
+
   let person1 = textfield1.value;
   let person2 = textfield2.value;
   let mainString = 'loves';
@@ -106,11 +113,18 @@ submitButton.addEventListener('click', () => {
     FinalResult.textContent = ` Its ${lovePercentage}%. You guys can go on date. Dont fear Just go ask Him/her out 📅`;
   } else if (lovePercentage >= 76 && lovePercentage <= 90) {
     FinalResult.textContent = ` Wow! Its ${lovePercentage}%. Thats we call as a true love 💕`;
+  } else if (textfield1.value == null && textfield2.value == null) {
+    FinalResult.textContent = ` Please Enter the Names`;
   } else {
     FinalResult.textContent = `awwww! ${lovePercentage}%. i think you know what to do now 😘`;
   }
 });
 
-RefreshPage.addEventListener('click', () => {
-  location.reload();
-});
+// RefreshPage.addEventListener('click', () => {
+//   textfield1.value = '';
+//   textfield2.value = '';
+//   arr2 = [];
+//   arr3 = [];
+//   arr4 = [];
+//   FinalResult.textContent = '';
+// });
