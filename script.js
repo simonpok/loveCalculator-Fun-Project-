@@ -5,7 +5,10 @@ let textfield2 = document.getElementById('SecondPersonName');
 let submitButton = document.getElementById('GeneratePercentage');
 let FinalResult = document.getElementById('result');
 let RefreshPage = document.getElementById('clearField');
+let titleText = document.getElementById('Title');
+
 // let iconPosition = document.getElementById('icon');
+titleText.classList.add('custom-text2');
 FinalResult.classList.add('custom-text');
 
 let person1 = textfield1.value;
@@ -33,8 +36,8 @@ submitButton.addEventListener('click', () => {
 
   FinalResult.textContent = '';
 
-  let person1 = textfield1.value;
-  let person2 = textfield2.value;
+  let person1 = textfield1.value.trim();
+  let person2 = textfield2.value.trim();
   let mainString = 'loves';
   let lovePercentage;
 
@@ -104,20 +107,23 @@ submitButton.addEventListener('click', () => {
   console.log(arr4);
   //console.log(parseInt(arr4.join(''), 10), '%');
   lovePercentage = parseInt(arr4.join(''), 10);
-  if (lovePercentage < 20) {
-    FinalResult.textContent = ` Its just ${lovePercentage}%. You guys better be brother and sister 💥`;
-  } else if (lovePercentage >= 20 && lovePercentage <= 45) {
-    FinalResult.textContent = ` Its ${lovePercentage}%. Its best to be Friends 😊`;
-  } else if (lovePercentage >= 46 && lovePercentage <= 60) {
-    FinalResult.textContent = ` Its ${lovePercentage}%. Keep on Trying 👏`;
-  } else if (lovePercentage >= 61 && lovePercentage <= 75) {
-    FinalResult.textContent = ` Its ${lovePercentage}%. You guys can go on date. Dont fear Just go ask Him/her out 📅`;
-  } else if (lovePercentage >= 76 && lovePercentage <= 90) {
-    FinalResult.textContent = ` Wow! Its ${lovePercentage}%. Thats we call as a true love 💕`;
-  } else if (textfield1.value == null && textfield2.value == null) {
-    FinalResult.textContent = ` Please Enter the Names`;
+
+  if (person1 !== '' && person2 !== '') {
+    if (lovePercentage < 20) {
+      FinalResult.textContent = ` Its just ${lovePercentage}%. You guys better be brother and sister 💥`;
+    } else if (lovePercentage >= 20 && lovePercentage <= 45) {
+      FinalResult.textContent = ` Its ${lovePercentage}%. Its best to be Friends only😊`;
+    } else if (lovePercentage >= 46 && lovePercentage <= 60) {
+      FinalResult.textContent = ` Its ${lovePercentage}%. Keep on Trying 👏`;
+    } else if (lovePercentage >= 61 && lovePercentage <= 75) {
+      FinalResult.textContent = ` Its ${lovePercentage}%. You guys can go on date. Dont fear Just go ask Him/her out 📅`;
+    } else if (lovePercentage >= 76 && lovePercentage <= 90) {
+      FinalResult.textContent = ` Wow! Its ${lovePercentage}%. Thats we call it a true love 💕`;
+    } else {
+      FinalResult.textContent = `awwww! ${lovePercentage}%. We think you know what to do now 😘`;
+    }
   } else {
-    FinalResult.textContent = `awwww! ${lovePercentage}%. i think you know what to do now 😘`;
+    FinalResult.textContent = `Please! Enter Names in Both Fields.`;
   }
 });
 
